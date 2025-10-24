@@ -1,19 +1,24 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+import axios from 'axios'
 const App = () => {
- 
-    const data=localStorage.setItem("hello","hii i am abhishek singh")
+     const [data, setData] = useState([])
+   
+    const getData= async()=>{
+      const response= await axios.get("https://dummyjson.com/quotes")
+      console.log(response.data.quotes);
+      
+    }
 
- 
- const user=localStorage.getItem("data")
- console.log(JSON.parse(user));
- 
-    
     
 
   return (
     <div>
-        Hello
+      <button onClick={getData}>get Data</button>
+      <div>
+       {data.map(function(elem,idx){
+          return <h3 key={idx}>Hello</h3>
+       })}
+      </div>
     </div>
   )
 }
