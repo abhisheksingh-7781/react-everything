@@ -1,23 +1,20 @@
 import React, { useEffect, useState } from 'react'
 
 const App = () => {
-    const [num1, setnum1] = useState(10)
-    const [num2, setnum2] = useState(20)
-
+    const [time, setTime] = useState(new Date().toLocaleTimeString())
     useEffect(() => {
-        console.log("useEffect is running ....")
-    }, [num1,num2])
+      const intervel=setInterval(() => {
+        setTime(new Date().toLocaleTimeString())
+      }, 1000);
     
-
-
+      return () => {
+        clearInterval(intervel)
+      }
+    }, []);
+    
   return (
     <div>
-        <h1 >{num1}</h1>
-        <button onClick={()=>{setnum1(num1+1)}}>Click me</button>
-
-        <h1>{num2}</h1>
-        <button onClick={()=>{setnum2(num2+1)}}>click me</button>
-
+      <h1>current Time is {time}</h1>
     </div>
   )
 }
