@@ -3,13 +3,13 @@ import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import About from './pages/About'
 import Home from './pages/Home'
-import Content from './pages/Content'
 import Product from './pages/Product'
 import PageNotFond from './pages/PageNotFond'
 import Mens from './pages/Mens'
 import Women from './pages/Women'
 import Kids from './pages/Kids'
-
+import Course from './pages/Course'
+import CourseDetails from './pages/CourseDetails'
 
 const App = () => {
   return (
@@ -18,7 +18,8 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home/>}  />
         <Route path='/about' element={<About/>}  />
-        <Route path='/content' element={<Content/>}  />
+        <Route path='/course' element={<Course/>}  />
+        <Route path='/course/:id' element={<CourseDetails/>} />
         <Route path='/product' element={<Product/>}  >
                  <Route path='men' element={<Mens/>}  />
                  <Route path='women' element={<Women/>}  />
@@ -32,6 +33,7 @@ const App = () => {
 }
 
 export default App
+
 
 
 
