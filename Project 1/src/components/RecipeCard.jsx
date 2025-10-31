@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const RecipeCard = (props) => {
     
-    const {id,title,image,description,instructions,category}=props.recipe
+    const {id,title,image,desc,inst,category}=props.recipe
   return (
       <Link to={`/recipe/details/${id}`} className="bg-[#0f172a] text-white h-[480px]  w-[320px] object-cover rounded-2xl overflow-hidden shadow-lg flex flex-col hover:-translate-y-1 transition-transform duration-200">
       {/* Image */}
@@ -25,11 +25,11 @@ const RecipeCard = (props) => {
 
         {/* Description */}
         <p className="text-gray-400 text-sm">
-            <strong className="text-white">Description:</strong> {description.slice(0,65)}...{" "} <small className="text-blue-400">More</small></p>
+            <strong className="text-white">Description:</strong> {desc.slice(0,65)}...{" "} <small className="text-blue-400">More</small></p>
 
         {/* Instructions */}
         <p className="text-gray-300 text-sm leading-relaxed">
-          <strong className="text-white">Instructions:</strong> {instructions.slice(0,65)} ...{" "} <small className="text-blue-400">More</small>
+          <strong className="text-white">Instructions:</strong> {inst.slice(0,65)} ...{" "} <small className="text-blue-400">More</small>
         </p>
 
         {/* Button */}

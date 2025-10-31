@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import  { useContext } from 'react'
 import { recipeContext } from '../context/RecipeContext'
 import RecipeCard from '../components/RecipeCard'
 
@@ -10,7 +10,7 @@ const Recipes = () => {
  ))
 
   return (
-    <div className=' min-h-screen bg-[#0b1120] flex flex-wrap justify-center gap-6 p-8'>{data.length > 0 ? renderRecipe :"No Recipes Found !"}</div>
+    <div className=' min-h-screen bg-[#0b1120] text-white font-bold text-4xl  flex flex-wrap justify-center gap-6 p-8'>{data.length > 0 ? renderRecipe :" No Recipe found ! "  }</div>
   
   )
 }

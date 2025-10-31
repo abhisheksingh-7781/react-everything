@@ -21,7 +21,7 @@ const Create = () => {
     // reset()
     toast.success("New Recipe Created!")
 
-   navigate("/recipe")
+  //  navigate("/recipe")
 
 
   };
@@ -76,7 +76,7 @@ const Create = () => {
                 Description
               </label>
               <textarea
-                {...register("description")}
+                {...register("desc")}
                 rows="4"
                 placeholder="Write your recipe description here..."
                 className="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 text-sm
@@ -92,7 +92,7 @@ const Create = () => {
                 Instructions
               </label>
               <textarea
-                {...register("instructions")}
+                {...register("inst")}
                 rows="4"
                 placeholder="Write cooking instructions separated by commas..."
                 className="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 text-sm
