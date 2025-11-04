@@ -6,22 +6,22 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 const Create = () => {
-     const navigate=useNavigate()
-    const {data,setData}=useContext(recipeContext)
-  const { register, handleSubmit,reset } = useForm();
+  const navigate = useNavigate()
+  const { data, setData } = useContext(recipeContext)
+  const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (recpie) => {
-    recpie.id=nanoid()
+    recpie.id = nanoid()
 
-    // const copydata=[...data]
-    // copydata.push(recpie)
-    // setData(copydata)
-
-    setData([...data,recpie])
+    const copydata = [...data]
+    copydata.push(recpie)
+    setData(copydata)
+    // setData([...data,recpie])
+    localStorage.setItem("recipes", JSON.stringify(copydata));
     // reset()
     toast.success("New Recipe Created!")
 
-  //  navigate("/recipe")
+    navigate("/recipe")
 
 
   };

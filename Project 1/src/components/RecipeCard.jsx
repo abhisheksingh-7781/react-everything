@@ -1,16 +1,14 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const RecipeCard = (props) => {
-    
-    const {id,title,image,desc,inst,category}=props.recipe
+  const { id, title, image, desc, inst, category } = props.recipe;
   return (
-      <Link to={`/recipe/details/${id}`} className="bg-[#0f172a] text-white h-[480px]  w-[320px] object-cover rounded-2xl overflow-hidden shadow-lg flex flex-col hover:-translate-y-1 transition-transform duration-200">
+    <Link
+      to={`/recipe/details/${id}`}
+      className="bg-[#0f172a] text-white h-[480px]  w-[320px] object-cover rounded-2xl overflow-hidden shadow-lg flex flex-col hover:-translate-y-1 transition-transform duration-200"
+    >
       {/* Image */}
-      <img
-        src={image}
-        alt={title}
-        className="h-44 w-full object-cover"
-      />
+      <img src={image} alt={title} className="h-44 w-full object-cover" />
 
       {/* Content */}
       <div className="p-5 flex flex-col  gap-3 flex-1">
@@ -21,15 +19,19 @@ const RecipeCard = (props) => {
 
         {/* Title */}
         <h2 className="text-lg font-semibold">
-            <strong className="text-white">Title:</strong> {title}</h2>
+          <strong className="text-white">Title:</strong> {title}
+        </h2>
 
         {/* Description */}
         <p className="text-gray-400 text-sm">
-            <strong className="text-white">Description:</strong> {desc.slice(0,65)}...{" "} <small className="text-blue-400">More</small></p>
+          <strong className="text-white">Description:</strong>{" "}
+          {desc.slice(0, 65)}... <small className="text-blue-400">More</small>
+        </p>
 
         {/* Instructions */}
         <p className="text-gray-300 text-sm leading-relaxed">
-          <strong className="text-white">Instructions:</strong> {inst.slice(0,65)} ...{" "} <small className="text-blue-400">More</small>
+          <strong className="text-white">Instructions:</strong>{" "}
+          {inst.slice(0, 65)} ... <small className="text-blue-400">More</small>
         </p>
 
         {/* Button */}
@@ -40,7 +42,7 @@ const RecipeCard = (props) => {
         </div>
       </div>
     </Link>
-  )
-}
+  );
+};
 
-export default RecipeCard
+export default RecipeCard;
