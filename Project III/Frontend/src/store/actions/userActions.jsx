@@ -1,6 +1,6 @@
      
 import  axios  from '../../utils/config';
-import { loaduser } from '../reducers/UserSlice';
+import { loaduser } from '../Reducers/UserSlice';  
 
 export const asynctCurrentUser=()=>async (dispatch,getState)=>{
     try {

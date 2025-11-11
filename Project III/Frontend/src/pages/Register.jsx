@@ -18,8 +18,8 @@ const Register = () => {
      reset()
    }
   return (
-    <div className="py-30 px-20 flex justify-center items-center ">
-         <form onSubmit={handleSubmit(RegisterHendler)} className="flex flex-col justify-center items-center w-1/4 text-3xl" action="">   
+    <div className="py-10 px-20 flex justify-center items-center ">
+         <form onSubmit={handleSubmit(RegisterHendler)} className="flex flex-col justify-center  w-1/4 text-3xl" action="">   
              <input {...register("username")} className=" bg-gray-800 text-white mb-5 p-3 outline-0 border-b-2  " type="text" placeholder="Enter username"  />
             <input {...register("email")} className="bg-gray-800 text-white mb-5 p-3 outline-0 border-b-2" type="email" placeholder="Enter your email"  />  
             <input {...register("password")} className="bg-gray-800 text-white mb-5 p-3 outline-0 border-b-2" type="password" placeholder="Enter your password" />  

@@ -1,16 +1,17 @@
 import { nanoid } from "nanoid"
 import { useForm } from "react-hook-form"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { asyncloginUser } from "../Store/actions/userActions"
 import { useDispatch } from 'react-redux';
 
 const Login = () => {
+    const navigate=useNavigate()
    const {register,handleSubmit,reset} = useForm()
    const dispatch=useDispatch()
-
    const LoginHandler=(login)=>{
    dispatch(asyncloginUser(login))
-     console.log(login)
+    navigate("/products")
+   
    }
   return (
     <div className="py-30 px-20 flex justify-center items-center ">
