@@ -19,7 +19,7 @@
       "username": "abhishek singh",
       "email": "ab@gmail.com",
       "password": "121212",
-      "isAdmin": false
+      "isAdmin": true
     }
   ],
   "products": [

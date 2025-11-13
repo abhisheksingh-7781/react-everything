@@ -4,7 +4,7 @@ import Products from '../pages/Products'
 import Login from '../pages/Login' 
 import Register from '../pages/Register' 
 import CreateProducts from './../pages/Admin/CreateProducts' 
-import UpdateProduct from '../pages/Admin/UpdateProduct'  
+import ProductDatils from '../pages/Admin/ProductDetails'
       
 const MainRoutes = () => {
   return (
@@ -13,8 +13,9 @@ const MainRoutes = () => {
        <Route path='/products' element={<Products/>} />
        <Route path='/login' element={<Login/>} />
        <Route path='/register' element={<Register/>} />
+       <Route path='/product/:id' element={<ProductDatils/>} />
        <Route path='/admin/create-product' element={<CreateProducts/>} />
-       <Route path='/admin/update-product/:id' element={<UpdateProduct/>} />
+
     </Routes>
   )
 }
