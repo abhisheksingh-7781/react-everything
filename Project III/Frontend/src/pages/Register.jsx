@@ -13,6 +13,7 @@ const Register = () => {
    const RegisterHendler=(register)=>{
      register.id=nanoid()
      register.isAdmin=false
+     register.cart= [ ]
      dispacth(asyncRegister(register))
      navigate("/login")
      reset()

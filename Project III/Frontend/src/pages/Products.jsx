@@ -1,9 +1,30 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { asyncupdateuser } from './../Store/actions/userActions';
 
 const Products = () => {
-  const products = useSelector((state) => state.productReducer.products);
+  const dispatch=useDispatch()
 
+  const user=useSelector((state)=>state.userReducer.user)
+  const products=useSelector((state)=>state.productReducer.products)
+
+  const AddToCartHendler=(product)=>{ 
+        const userCart = user.cart || []; 
+    const copyuser={...user, cart: [...userCart]} 
+    // const copyuser={...user,cart: [...user.cart]} 
+    const x=copyuser.cart.findIndex((e)=>e?.product?.id==product.id) 
+  
+    if(x == -1){  
+      copyuser.cart.push({product,quantity:1});  
+    }else{  
+      copyuser.cart[x]={ 
+        product,
+        quantity:copyuser.cart[x].quantity+1, 
+      }
+    }
+    console.log(copyuser)
+    dispatch(asyncupdateuser(copyuser.id,copyuser));
+  }
 
   return (
     <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-black p-8">
@@ -40,7 +61,7 @@ const Products = () => {
               </p>
 
               {/* Button */}
-              <div className="flex justify-between items-center gap-8 ">
+              <div onClick={()=>AddToCartHendler(product)} className="flex justify-between items-center gap-8 ">
                    <button className="w-[50%] py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-xl font-semibold transition-all mt-auto">
                 Add to Cart
               </button>

@@ -1,25 +1,33 @@
 {
   "user": [
     {
-      "id": "RL1FXshix4zIeShYXfrTV",
-      "username": "Abhishek ",
-      "email": "a@gamil.com",
-      "password": "123456",
-      "isAdmin": true
-    },
-    {
       "id": "M0itKBo4FGYknOfDDhl6U",
       "username": "vikas ram",
       "email": "viku@gmail.com",
       "password": "12123",
-      "isAdmin": false
+      "isAdmin": false,
+      "cart": [
+        {
+          "productId": "Cx447K4JafCIpUV9NZiDW",
+          "quantity": 3
+        },
+        {
+          "productId": "cdgMB69175g33nTesMiY4",
+          "quantity": 4
+        },
+        {
+          "productId": "1",
+          "quantity": 2
+        }
+      ]
     },
     {
-      "id": "yf75-NTsIFBQNtFfNiilG",
-      "username": "abhishek singh",
-      "email": "ab@gmail.com",
-      "password": "121212",
-      "isAdmin": true
+      "id": "799zUKoAjpNFw0_cMYaaI",
+      "username": "master",
+      "email": "master@gmail.com",
+      "password": "123456",
+      "isAdmin": true,
+      "cart": []
     }
   ],
   "products": [
@@ -34,6 +42,20 @@
         "rate": 3.9,
         "count": 120
       }
+    },
+    {
+      "id": "cdgMB69175g33nTesMiY4",
+      "image": "https://i.imgur.com/QkIa5tT.jpeg",
+      "title": "Classic Black T-Shirt",
+      "price": "73",
+      "desc": "Elevate your everyday wardrobe with our Classic White Tee. Crafted from premium soft cotton material, this versatile t-shirt combines comfort with durability, perfect for daily wear. Featuring a relaxed, unisex fit that flatters every body type, it's a staple piece for any casual ensemble. Easy to care for and machine washable, this white tee retains its shape and softness wash after wash. Pair it with your favorite jeans or layer it under a jacket for a smart look."
+    },
+    {
+      "id": "Cx447K4JafCIpUV9NZiDW",
+      "image": "https://i.imgur.com/QkIa5tT.jpeg",
+      "title": "Sleek Comfort-Fit Over-Ear Headphones",
+      "price": "35",
+      "desc": "'re at home, in the office, or on the move. Their durable construction and timeless design provide both aesthetically pleasing looks and long-lasting performance."
     }
   ]
 }

@@ -13,11 +13,11 @@ const CreateProducts = () => {
    const ProductHendler=(Product)=>{
      Product.id=nanoid()
      dispacth(asyncCreateProducts(Product))
-       navigate("/products")
+       navigate("/")
     //  reset()
    }
   return (
-  <div className="h-full flex items-center justify-center bg-linear-to-br from-gray-900 via-gray-800 to-black p-5">
+  <div className="h-full flex items-center justify-center bg-linear-to-br from-gray-900 via-gray-800 to-black p-3">
 
   <form 
     onSubmit={handleSubmit(ProductHendler)}

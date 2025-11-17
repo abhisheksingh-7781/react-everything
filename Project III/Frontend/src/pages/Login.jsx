@@ -10,7 +10,7 @@ const Login = () => {
    const dispatch=useDispatch()
    const LoginHandler=(login)=>{
    dispatch(asyncloginUser(login))
-    navigate("/products")
+    navigate("/")
    
    }
   return (
